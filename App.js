@@ -27,11 +27,9 @@ export default function App() {
           {"\n\n"}
         </Text>
 
-        <Input
-          
+        <Input          
           placeholder='Insira seu email'
-          onChangeText={text => onChangeEmailText(text)}
-          
+          onChangeText={text => onChangeEmailText(text)}          
         />
 
         
@@ -44,10 +42,14 @@ export default function App() {
 
               
       <Button
-        title="Solid Button"
+        title="Entrar"
       />
 
-    
+      <TouchableOpacity >
+        <Text>{"\n"}Cadastre-se aqui</Text>
+      </TouchableOpacity>
+
+
       </View>    
   );
 }
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,    
     alignItems: 'center',
-    padding: 15
-    
+    padding: 15,
+    justifyContent: "center"
   },
 });
