@@ -1,11 +1,23 @@
 
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button, StatusBar } from 'react-native';
 
-export default function HomePage(){
+const HomePage = ({ navigation }) => {
     return(
         <View>
+            <StatusBar hidden />
             <Text>Home Page</Text>
+            <Button
+            title='Ir para Agenda'
+            onPress={() => navigation.navigate('Agenda')}
+            />
         </View>
     );
 }
+
+
+HomePage.navigateOptions = {
+    title: null,
+}
+
+export default HomePage;
